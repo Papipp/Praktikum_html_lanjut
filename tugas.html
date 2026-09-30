@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Halaman Profil Program Studi Teknologi Informasi">
+    <title>Profil Program Studi | Teknologi Informasi</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #444; padding: 8px; text-align: center; }
+        thead { background: #dbeafe; }
+        tfoot { background: #f3f4f6; font-weight: bold; }
+        fieldset { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Elemen Semantik: Header & Nav -->
+    <header>
+        <h1>Profil Program Studi Teknologi Informasi</h1>
+        <nav aria-label="Navigasi Utama">
+            <ul>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#kurikulum">Kurikulum</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Profil dengan Article, Time, Figure, Details, Audio, & data-* -->
+        <section id="profil">
+            <h2>Tentang Program Studi</h2>
+            <article>
+                <header>
+                    <h3>Akreditasi Unggul</h3>
+                    <!-- Menggunakan <time> -->
+                    <p>Pembaruan terakhir: <time datetime="2026-09-30">30 September 2026</time></p>
+                </header>
+                <p>Program studi yang berfokus pada pengembangan siber seccurity, kecerdasan buatan, dan sistem jaringan.</p>
+                
+                <!-- Menggunakan <figure> & <figcaption> -->
+                <figure>
+                    <img src="media/samurai.jpg" alt="Suasana Gedung Program Studi" width="300">
+                    <figcaption>Gambar 1. Gedung Utama Program Studi</figcaption>
+                </figure>
+            </article>
+
+            <!-- Menggunakan <details> & <summary> -->
+            <details>
+                <summary>Klik untuk melihat Fasilitas Lab</summary>
+                <p>Terdapat Lab Siber, Lab Jaringan Komputer, dan Lab Kecerdasan Buatan.</p>
+            </details>
+
+            <!-- Menggunakan Audio/Video -->
+            <article>
+                <h3>Sambutan Ketua Prodi (Audio)</h3>
+                <audio controls>
+                    <source src="media/alan-walker-lily.mp3" type="audio/mpeg">
+                    Browser Anda tidak mendukung elemen audio.
+                </audio>
+            </article>
+        </section>
+
+        <!-- 2. Tabel Lengkap dengan caption, thead, tbody, tfoot, rowspan, colspan, & data-* -->
+        <section id="kurikulum">
+            <h2>Mata Kuliah Unggulan</h2>
+            <table>
+                <caption>Daftar Mata Kuliah Praktikum</caption>
+                <colgroup>
+                    <col style="width: 20%">
+                    <col style="width: 50%">
+                    <col style="width: 30%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" rowspan="2">Semester</th>
+                        <th scope="col" colspan="2">Detail Mata Kuliah</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Nama Mata Kuliah</th>
+                        <th scope="col">SKS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="2">Semester 5</th>
+                        <!-- Menggunakan atribut data-* -->
+                        <td data-kode="TI301">Pemrograman Aplikasi Web Lanjut</td>
+                        <td>3 SKS</td>
+                    </tr>
+                    <tr>
+                        <td data-kode="TI302">Basis Data</td>
+                        <td>3 SKS</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total SKS Praktikum</td>
+                        <td>6 SKS</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- 3. Formulir Kontak dengan 6 Kontrol, Fieldset, Legend, & Validasi HTML5 -->
+        <section id="kontak">
+            <h2>Formulir Kontak Prodi</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Informasi Pengirim</legend>
+                    <p>
+                        <!-- Kontrol 1: Input Text (dengan minlength & required) -->
+                        <label for="nama">Nama Lengkap:</label><br>
+                        <input type="text" id="nama" name="nama" required minlength="3" placeholder="Masukkan nama">
+                    </p>
+                    <p>
+                        <!-- Kontrol 2: Input Email -->
+                        <label for="email">Email Kampus:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="nama@kampus.ac.id">
+                    </p>
+                    <p>
+                        <!-- Kontrol 3: Select Option -->
+                        <label for="kategori">Kategori Pesan:</label><br>
+                        <select id="kategori" name="kategori" required>
+                            <option value="">-- Pilih --</option>
+                            <option value="akademik">Akademik</option>
+                            <option value="fasilitas">Fasilitas</option>
+                        </select>
+                    </p>
+                    <p>
+                        <!-- Kontrol 4: Input Date -->
+                        <label for="tgl">Tanggal Pengajuan:</label><br>
+                        <input type="date" id="tgl" name="tgl" required>
+                    </p>
+                    <p>
+                        <!-- Kontrol 5: Input Range -->
+                        <label for="urgensi">Tingkat Urgensi (1-5):</label><br>
+                        <input type="range" id="urgensi" name="urgensi" min="1" max="5">
+                    </p>
+                    <p>
+                        <!-- Kontrol 6: Textarea (dengan maxlength & required) -->
+                        <label for="pesan">Pesan:</label><br>
+                        <textarea id="pesan" name="pesan" rows="4" required maxlength="200"></textarea>
+                    </p>
+                </fieldset>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Elemen Semantik: Aside & Footer -->
+    <aside>
+        <h3>Info Tambahan</h3>
+        <p>Jam Operasional Sekretariat: 08.00 - 16.00 WIB</p>
+    </aside>
+
+    <footer>
+        <address>
+            Email: <a href="mailto:Teknologiinformasi@unjaya.ac.id">Teknologiinformasi@unjaya.ac.id</a>
+        </address>
+        <p><small>&copy; 2026 Program Studi Teknologi Informasi</small></p>
+    </footer>
+
+</body>
+</html>

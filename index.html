@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="portal informasi kampus untuk praktikum HTML lanjut">
+    <title>Portal Kampus | Praktikum HTML Lanjut</title>
+</head>
+<body>
+    <header>
+        <h1>Portal Informasi Kampus</h1>
+        <nav aria-label="Navigasi Utama">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tabel.html">Jadwal</a></li>
+                <li><a href="form.html">Pendaftaran</a></li>
+                <li><a href="multimedia.html">Galeri</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="atribut-demo">
+            <h2>Atribut Demo</h2>
+            <p title="ini adalah tooltip" contenteditable="true">Paragraf ini dapat diedit di browser</p>
+            <p hidden>Teks ini tersembunyi</p>
+
+            <ul>
+                <li data-kode="TI101" data-sks="3">Pemrograman web lanjut</li>
+                <li data-kode="TI102" data-sks="3">Basis data</li>
+            </ul>
+
+            <button type="button" aria-label="Tutup panel informasi">X</button>
+
+            <div role="status" aria-live="polite">Data berhasil disimpan</div>
+
+        </section>
+        <section id="Berita">
+            <h2>Berita Terbaru</h2>
+            <article>
+                <header>
+                    <h3>Seminar Nasional Teknologi Informasi</h3>
+                    <p>Dipublikasikan pada 
+                        <time datetime="2026-09-28">28 September 2026</time>
+                    </p>
+                </header>
+                <p>Seminar akan dilaksanakan di aula utama dengan menghadirkan praktisi dari berbagai perusahaan teknologi</p>
+                <figure>
+                    <img src="media/samurai.jpg" alt="suasana seminar" width="400">
+                    <figcaption>Gambar 1. Persiapan seminar di aula utama</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Pendaftaran Praktikum Semester Ganjil</h3>
+                    <p><time datetime="2026-09-25">25 September 2026</time></p>
+                </header>
+                <p>Pendaftaran dibuka hingga akhir bulan oktober.</p>
+            </article>
+        </section>
+
+        <section id="faq">
+            <h2>Pertanyaan Umum</h2>
+            <details>
+                <summary>Apakah praktikum wajib diikuti?</summary>
+                <p>Ya, kehadiran minimal 80% dari seluruh pertemuan.</p>
+            </details>
+        </section>
+
+        <aside>
+            <h2>Info Singkat</h2>
+            <ul>
+                <li>Jam Layanan: 08.00 - 16.00 WIB</li>
+                <li>Lab Gedung B, Lantai 2</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <address>
+            Program Studi Teknologi Informasi <br>
+            email: <a href="mailto:tekno@unjaya.ac.id">TeknologiInformasi@Unjaya.ac.id</a>
+        </address>
+        <p><small>&copy; 2026 Portal Kampus. Hak cipta dilindungi.</small></p>
+    </footer>
+</body>
+</html>
+
+<!-- Pengamatan Pribadi -->
+<!-- 1. Section ama article gada perbedaan sih buat tampilannya,
+ tapi buat penggunaan biasanya tergantung ama jenis kontenta sih, sederhananya section buat kelompok topi dan article buat topik mandiri -->
+<!-- 2. summary di klik akan mengeluarkan detail nya sih, atau semacam toggle gitu -->
+<!-- 3. datatime biar bisa nampilin format yang bisa dibaca ama mesin -->
+
+<!-- Kalo pake <div> -->
+<!-- Struktur jadi gada artinya, gabisa ngasih informasi ke browser atau mesin pencari -->
+<!-- jadi over dosis pake ARIA buat balikin aksesbilitasnya -->
+
+<!-- Hasil DevTools -->
+<!-- VM335:1 Uncaught TypeError: document.queryselector is not a function
+    at <anonymous>:1:10
+(anonymous)	@	VM335:1 -->
